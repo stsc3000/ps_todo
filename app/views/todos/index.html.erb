@@ -1,0 +1,27 @@
+<div ng-controller="TodosCtrl">
+  {{ title }}
+
+  <ul>
+    <li ng-repeat="todo in todoService.todos">
+      <input type="checkbox" ng-model="todo.completed" ng-change="updateTodo(todo)"></input>
+      {{ todo.title }}
+      <button ng-click="deleteTodo(todo)">X</button>
+    </li>
+  </ul>
+
+  <input ng-model="formData.title" type="text"></input>
+  <button ng-click="createTodo()">Create Todo</button>
+</div>
+
+<%#1 + 2 = {{ 1 + 2 }}%>
+
+<%#<input ng-model="password"></input> %>
+<%#{{ password }}%>
+<%#<div ng-show="password == 'secret'">SECRET DISCOVERED</div>%>
+<%#<div ng-hide="password == 'secret'">SECRET NOT DISCOVERED</div>%>
+
+<%#<ul ng-init="list=[{name: 'Han'}, {name: 'Luke'}]">%>
+  <%#<li ng-repeat="item in list">%>
+    <%#{{ item.name }}%>
+  <%#</li>%>
+<%#</ul>%>
